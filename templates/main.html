@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<style>
+form {
+    margin: auto;
+    width: 35%;
+}
+
+.result {
+        margin: auto;
+        width: 35%;
+        border: 1px solid #ccc;
+}
+</style>
+
+<h1>hello world</h1>
+    <head>
+        <title>Used Car Predictions</title>
+    </head>
+    <form action="{{ url_for('predict') }}" method="POST">
+        <fieldset>
+            <legend>Input values:</legend>
+            mileage:
+            <input name="mileage" type="number" required>
+            <br>
+            ext_color:
+            <input name="ext_color" type="text">
+            <br>
+            city_mpg:
+            <input name="city_mpg" type="number">
+            <br>
+            high_mpg:
+            <input name="high_mpg" type="number">
+            <br>
+            engine:
+            <input name="engine" type="text">
+            <br>
+            car_year:
+            <input name="car_year" type='number'>
+            <br>
+            make:
+            <input name="make" type="text">
+            <br>
+            size:
+            <input name="size" type="number">
+            <br>
+            car_type:
+            <input name="car_type" type="text">
+            <br>
+            <input type="submit">
+        </fieldset>
+    </form>
+    <br>
+    {{prediction_text}}
+    </div>
+</html>
