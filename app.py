@@ -21,7 +21,7 @@ model = load('model/pipeline.pkl')
 @app.route('/')
 def main():
     return(flask.render_template('main.html'))
-                                    
+
 @app.route('/predict', methods=['POST'])
 def predict():
     int_features = [x for x in flask.request.form.values()]

@@ -1,55 +1,74 @@
 <!DOCTYPE html>
 <html>
 <style>
+
 form {
     margin: auto;
-    width: 35%;
+    width: 50%;
 }
 
 .result {
         margin: auto;
-        width: 35%;
+        width: 50%;
         border: 1px solid #ccc;
 }
+
+.container {
+  width: 500px;
+  clear: both;
+}
+
+.container input {
+  width: 100%;
+  clear: both;
+}
+
 </style>
 
 <h1>hello world</h1>
     <head>
         <title>Used Car Predictions</title>
     </head>
-    <form action="{{ url_for('predict') }}" method="POST">
-        <fieldset>
-            <legend>Input values:</legend>
-            mileage:
-            <input name="mileage" type="number" required>
-            <br>
-            ext_color:
-            <input name="ext_color" type="text">
-            <br>
-            city_mpg:
-            <input name="city_mpg" type="number">
-            <br>
-            high_mpg:
-            <input name="high_mpg" type="number">
-            <br>
-            engine:
-            <input name="engine" type="text">
-            <br>
-            car_year:
-            <input name="car_year" type='number'>
-            <br>
-            make:
-            <input name="make" type="text">
-            <br>
-            size:
-            <input name="size" type="number">
-            <br>
-            car_type:
-            <input name="car_type" type="text">
-            <br>
-            <input type="submit">
-        </fieldset>
-    </form>
+    <div class="container">
+        <form action="{{ url_for('predict') }}" method="POST">
+            <fieldset>
+                <legend>Input values:</legend>
+                mileage:
+                <input name="mileage" type="number" required>
+                <br>
+                ext_color:
+                <input name="ext_color" type="text">
+                <br>
+                city_mpg:
+                <input name="city_mpg" type="number">
+                <br>
+                high_mpg:
+                <input name="high_mpg" type="number">
+                <br>
+                engine:
+                <input name="engine" type="text">
+                <br>
+                car_year:
+                <input name="car_year" type='number'>
+                <br>
+                make:
+                <!-- <select name="make">
+                    <option value="Audi">Audi</option>
+                    <option value="BMW">BMW</option>
+                    <option value="Mercedes">Mercedes</option>
+                    <option value="Volvo">Volvo</option> -->
+                <input name="make" type="text">
+                <br>
+                size:
+                <input name="size" type="number">
+                <br>
+                car_type:
+                <input name="car_type" type="text">
+                <br>
+                <input type="submit">
+            </fieldset>
+        </form>
+    </div>
     <br>
     {{prediction_text}}
     </div>
