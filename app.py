@@ -29,7 +29,8 @@ def predict():
     prediction = model.predict(final_features)
     
     output = prediction[0]
-    return flask.render_template('main.html', prediction_text=output)
-    
+    return flask.render_template('main.html', 
+        prediction_text=output)
+        
 if __name__ == '__main__':
     app.run()

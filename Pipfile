@@ -10,6 +10,9 @@ flask = "*"
 sklearn = "*"
 pandas = "*"
 category-encoders = "*"
+jupyter = "*"
+beautifulsoup4 = "*"
+requests = "*"
 
 [requires]
 python_version = "3.8"
