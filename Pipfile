@@ -13,6 +13,7 @@ category-encoders = "*"
 jupyter = "*"
 beautifulsoup4 = "*"
 requests = "*"
+gunicorn = "*"
 
 [requires]
 python_version = "3.8"

@@ -27,10 +27,10 @@ def predict():
     int_features = [x for x in flask.request.form.values()]
     final_features = pd.DataFrame([int_features], columns=column_lables)
     prediction = model.predict(final_features)
-    
+
     output = prediction[0]
-    return flask.render_template('main.html', 
+    return flask.render_template('main.html',
         prediction_text=output)
-        
+
 if __name__ == '__main__':
     app.run()
