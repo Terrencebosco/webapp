@@ -1,1 +1,1 @@
-web: gunicorn app.py -t 120
+web: gunicorn car_p:APP -t 120
